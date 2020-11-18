@@ -1,0 +1,6 @@
+git clone URL// nhan ban kho chua
+git status
+git add *
+git status
+git commit -m"add new file *"
+git push
