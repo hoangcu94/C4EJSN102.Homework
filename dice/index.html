@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/8a0252abf2.js"></script>
+</head>
+<body>
+    <form action="startgame" class="start" id="form-start">
+        <div>Welcome to play</div>
+        <input type="text" placeholder="Enter name player-1"> <br>
+        <input type="text" placeholder="Enter name player-2"> <br>
+        <button id="rule" type="button">Rule</button> <br>
+        <button id="startgame" type="button">Start game</button>   
+    </form>
+    <form action="Rule" class="content" id="content">
+        <div>Luật chơi</div> <br><hr> <br>
+        <div>Người chơi: PLAYER 1 và PLAYER 2. Hãy set điểm chiến thắng ở FINAL SCORE trước nhé! </div><br>
+        <div>Có 2 xúc xắc để quay trong trò chơi, mỗi lần quay điểm của xúc sắc được tính ở CURRENT, tổng điểm của PLAYER được hiển thị ngay dưới tên PLAYER.</div><br>        
+        <div><strong>Chú ý:</strong> <span>Khi PLAYER quay 1 trong 2 xúc xắc vào 1 điểm, CURRENT nhận được là 0, nghĩa là + 0 vào điểm tổng.</span>  </div><br> 
+        <div>Bấm Newgame để bắt đầu trò chơi mới</div> <br>
+        <div>Bấm ROLL DICE để quay xúc xắc</div> <br>
+        <div>Bấm HOLD để dừng lượt.</div> <br> <hr> <br>
+        <button type="button" id="agree">I agree</button>
+    </form>
+    <form action="playgame" class="play" id="form-play">
+        <table>
+            <tr>
+                <td>
+                    <div class="name">PLAYER 1</div>
+                    <div class="score">0</div>
+                    <div class="winner"></div>
+                    <div class="current">
+                        <div class="label">Current</div>
+                        <div class="current-score">0</div>
+                    </div>
+                </td>
+                <td>
+                    <div class="name">PLAYER 2</div>
+                    <div class="score">0</div>
+                    <div class="winner"></div>
+                    <div class="current">
+                        <div class="label">Current</div>
+                        <div class="current-score">0</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- quay dice -->
+        <div class="loading">
+            
+            
+        </div>
+        <div class="scoreDices">
+
+        </div>
+        <button type="button" class="control btn-new" "><i class="ion-ios-plus-outline"></i>New game</button>
+        <button type="button" class="control btn-roll" id="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button type="button" class="control btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+        <button type="button" class="control btn-tutorial" id="btnX"><i class="fas fa-question"></i>Rule</button>
+        <input type="number" placeholder="Final score" class="final-score" id="d1" value="" pattern="[0-9]{1,3}">
+    </form>
+
+    <script src="./app.js"></script>
+</body>
+</html>
