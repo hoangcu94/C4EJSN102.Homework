@@ -1,0 +1,14 @@
+.main-wrap {
+    display: flex;
+    flex-direction: row;
+    font-size: 26px;
+    justify-content: center;
+    margin-top: 150px;
+}
+.main-wrap #number {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.main-wrap>button {
+    border: none;
+}

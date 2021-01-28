@@ -1,4 +1,4 @@
-// Vi tri trong documentation
+// Ex1. Vi tri trong documentation
 
 // beforebegin
 // <ul>
@@ -15,7 +15,7 @@
 //     container.insertAdjacentHTML(`beforeend`, `<li>${i}</li>`)
 // }
 
-// 2. setTimeout va setInterval
+// Ex2. setTimeout va setInterval
 // setTimeout chi kich hoat 1 lan, muon kich hoat tiep thi phai them 1 dong setTimeout nua
 // setInterval kich hoat lien tiep. De dung lai thi phai co them ham clearInterval()
 
@@ -127,13 +127,20 @@ mainForm.onsubmit = function (event) {
     // console.log("Hello world");
 
     let email = mainForm.email.value;
-    let pasword = mainForm.pasword.value;
-    if(!email) {
-        document.getElementById("error").innerHTML = "Invalid email";
-    } else if (!pasword){
-        document.getElementById("error").innerHTML = "Invalid pasword";
+    let password = mainForm.password.value;
+    if(!email && !password) {
+        document.getElementById("error1").innerHTML = 'Invalid email';
+        document.getElementById("error2").innerHTML = 'Invalid password';
+    } else if(!email) {
+        document.getElementById("error1").innerHTML = "Invalid email";
+        document.getElementById("error2").style.display = 'none';
+    } else if (!password){
+        document.getElementById("error1").style.display = 'none';
+        document.getElementById("error2").innerHTML = "Invalid password";
     } else {
-        document.getElementById("error").innerHTML = "";
+        // document.getElementById("error").innerHTML = "";
+        document.getElementById("error1").style.display = 'none';
+        document.getElementById("error2").style.display = 'none';
         alert("Login successfully");
     }
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type= "text" placeholder="Enter project" id= "project">
+    <input type= "text" placeholder="Enter task" id= "task">
+    <input type= "number" placeholder="Time spent" id= "timespent">
+    <button id="add">Add</button>
+    <table>
+        <thead> 
+            <tr>
+                <th>Project</th>
+                <th>Task</th>
+                <th>Time Spent</th>
+                <th>Actions</th>
+            </tr>
+        </thead>   
+        <tbody id = "table">
+            <tr>
+                <th>Project</th>
+                <th>Task</th>
+                <th>Time Spent</th>
+                <th>Actions</th>
+            </tr>
+            <tr class= "child">
+                <td>Learn front-end</td>
+                <td>Learn HTML</td>
+                <td>6</td>
+            </tr>
+            <tr class= "child">
+                <td>Learn front-end</td>
+                <td>Learn CSS</td>
+                <td>8</td>
+            </tr>
+            <tr class= "child">
+                <td>Learn front-end</td>
+                <td>Learn JS Variables and Data Types</td>
+                <td>6</td>
+            </tr>
+            <tr class= "child">
+                <td>Learn git</td>
+                <td>Learn git basics</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src= "data.js"></script>
+    <script src= "index.js"></script>
+</body>
+</html>
