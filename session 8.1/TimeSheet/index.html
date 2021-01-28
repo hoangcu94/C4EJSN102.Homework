@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Sheet</title>
+</head>
+<body>
+    <input type="text" placeholder="Project" id="project">
+    <input type="text" placeholder="Task" id="task">
+    <input type="number" placeholder="Time Spent" id="time-spent">
+    <button id="add">Add</button>
+    <button id="update" class="hidden">Update</button>
+    <table border="1px">
+        <thead>
+            <th>Project</th>
+            <th>Task</th>
+            <th>Time Spent</th>
+            <th>Action</th>
+        </thead>
+        <tbody id="table-body">
+        </tbody>        
+    </table>
+
+    <script src="./app.js"></script>
+</body>
+</html>
